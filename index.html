@@ -52,9 +52,9 @@
     const person = { <br>
     name: 'X' <br>
     } <br>
-    export default person //this will always be the default export<br><br>
+    export default person //this will always be the DEFAULT EXPORT<br><br>
     FROM utility.js file: <br>
-    export const clean = () => {...}<br>
+    export const clean = () => {...} //NAMED EXPORT<br>
     export const baseData = 10;<br><br>
 
     IN app.js: <br>
@@ -63,6 +63,8 @@
     import { baseData } from './utility.js' //we need to give it the exact name, because it is not exported as default<br>
     import { clean } from './utility.js' <br>
     COULD BE DONE ALSO LIKE: import { baseData, clean } from './utility.js' <br>
+    OR ALIAS: import { baseData as Base } from './utility.js' <br>
+    OR ALL: import * as bundled from './utility.js' <br>
 
 
 </body>
