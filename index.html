@@ -6,6 +6,37 @@
     <title>Next Generation JS</title>
 </head>
 <body>
-    
+    <h1>let &amp; const</h1>
+
+    <p>var still works, but with ES6 we shoult use let and const</p>
+    <p>let - variable values; const - constant values</p>
+    <p>
+        const name = "x" <br>
+        name = "y" //returns an error, because it is a constant
+    </p>
+
+    <h1>arrow functions</h1>
+
+    function myFunc(){} <br>
+    const myFunc = () => {}  //for multiple lines use {}, otherwise if only return just put the value - NO return needed
+
+    <h2>IMPORTANT: No more issues with the this keyword!</h2>
+    <p>If you use an arrow function, this will not change the context</p>
+
+    const printName = (name) => { <br>
+        console.log(name);
+    }
+<br>
+    const printName = (name, age) => { <br>
+        console.log(name);
+    }
+<br>
+    const printName = () => { <br>    
+        console.log("Hello");
+    }
+<br>
+    const printName = (number) => number * 2
+<br>
+
 </body>
 </html>
