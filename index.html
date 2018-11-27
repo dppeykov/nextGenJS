@@ -45,13 +45,25 @@
 
     <h1>export & imports</h1>
 
-    <p>Allows to split the code in multiple files - content (modules). Inside a JS file we can import content of another file.</p>
-<br>
-FROM person.js file: <br>
-const person = { <br>
+    <p>Allows to split the code in multiple files - content (modules). Inside a JS file we can import content of
+        another file.</p>
+    <br>
+    FROM person.js file: <br>
+    const person = { <br>
     name: 'X' <br>
-} <br>
-export default person <br>
+    } <br>
+    export default person //this will always be the default export<br><br>
+    FROM utility.js file: <br>
+    export const clean = () => {...}<br>
+    export const baseData = 10;<br><br>
+
+    IN app.js: <br>
+    import person from './person.js' <br>
+    import prs from './person.js' //because the import is default - we can use whatever we want as a name<br>
+    import { baseData } from './utility.js' //we need to give it the exact name, because it is not exported as default<br>
+    import { clean } from './utility.js' <br>
+    COULD BE DONE ALSO LIKE: import { baseData, clean } from './utility.js' <br>
+
 
 </body>
 
