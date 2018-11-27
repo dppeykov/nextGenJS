@@ -1,10 +1,12 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Next Generation JS</title>
 </head>
+
 <body>
     <h1>let &amp; const</h1>
 
@@ -18,25 +20,39 @@
     <h1>arrow functions</h1>
 
     function myFunc(){} <br>
-    const myFunc = () => {}  //for multiple lines use {}, otherwise if only return just put the value - NO return needed
+    const myFunc = () => {} //for multiple lines use {}, otherwise if only return just put the value - NO return needed
 
     <h2>IMPORTANT: No more issues with the this keyword!</h2>
     <p>If you use an arrow function, this will not change the context</p>
 
     const printName = (name) => { <br>
-        console.log(name);
+    console.log(name);
     }
-<br>
+    <br>
+    <br>
     const printName = (name, age) => { <br>
-        console.log(name);
+    console.log(name);
     }
-<br>
-    const printName = () => { <br>    
-        console.log("Hello");
+    <br>
+    <br>
+    const printName = () => { <br>
+    console.log("Hello");
     }
-<br>
+    <br>
+    <br>
     const printName = (number) => number * 2
+    <br>
+
+    <h1>export & imports</h1>
+
+    <p>Allows to split the code in multiple files - content (modules). Inside a JS file we can import content of another file.</p>
 <br>
+FROM person.js file: <br>
+const person = { <br>
+    name: 'X' <br>
+} <br>
+export default person <br>
 
 </body>
+
 </html>
